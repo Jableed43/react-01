@@ -24,3 +24,20 @@
   text-align: center;
   margin: 2px;
 }
+
+/* Navbar */
+
+.navUl{
+  display: flex;
+  justify-content: space-evenly;
+  background: beige;
+  padding: 10px;
+}
+
+.navUl li{
+  list-style: none;
+  background: antiquewhite;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 4px;
+}

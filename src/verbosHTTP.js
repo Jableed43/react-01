@@ -1,10 +1,22 @@
+const urlBase = "https://648b137217f1536d65ea4c77.mockapi.io/api/users";
+
+export function getUsers() {
+
+const fetchUsers = async (url) => {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    //Acá seteo los users como objeto de js
+    //Guardo los users en 
+    return data
+  } catch (error) {
+    console.log(error);
+  }
+}
+}
 
 //esta funcion es la que agrega el usuario
-function addOne(user) {
-    // 1° parametro es la url base
-    // 2° parametro un objeto, que lleva el metodo (post)
-    //en cabecera va el tipo de contenido
-    // body
+export function addOne(user) {
 
   fetch(urlBase, {
     method: "POST",
@@ -15,30 +27,18 @@ function addOne(user) {
     .then((res) => res.json())
     .then((data) => console.log(data))
     .catch((err) => postError.innerText=err);
+
+    const newUser = {
+      name: user.name,
+      lastName: user.lastName,
+      email: user.email,
+      phone: user.phone,
+    }
+    addOne(newUser)
 }
 
-//metodo que trabaja con formulario
-postUser.addEventListener("click", () => {
-    const newUser = {
-        name: inputName.value,
-        lastName: inputLastName.value,
-        email: inputEmail.value,
-        phone: inputPhone.value,
-      }
-      addOne(newUser)
-})
-
 // put
-
-let putUser = document.getElementById("putUser");
-
-let editId = document.getElementById("editId")
-let editName = document.getElementById("editName");
-let editLastName = document.getElementById("editLastname");
-let editEmail = document.getElementById("editEmail");
-let editPhone = document.getElementById("editPhone");
-
-function updateOne(id, user) {
+export function updateOne(id, user) {
   fetch(urlBase + `/${id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
@@ -49,22 +49,22 @@ function updateOne(id, user) {
     .catch((err) => console.error(err));
 }
 
-putUser.addEventListener("click", () => {
-    const editUser = {
-        name: editName.value,
-        lastName: editLastName.value,
-        email: editEmail.value,
-        phone: editPhone.value,
-      }
-      console.log(editUser);
-      updateOne(editId.value, editUser)
-})
+// putUser.addEventListener("click", () => {
+//     const editUser = {
+//         name: editName.value,
+//         lastName: editLastName.value,
+//         email: editEmail.value,
+//         phone: editPhone.value,
+//       }
+//       console.log(editUser);
+//       updateOne(editId.value, editUser)
+// })
 
 // delete
 let deleteUser = document.getElementById("deleteUser");
 let deleteId = document.getElementById("deleteId")
 //comunicacion con la api
-function deleteOne(id) {
+export function deleteOne(id) {
   fetch(urlBase + `/${id}`, {
     method: "DELETE",
   })
