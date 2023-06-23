@@ -12,6 +12,7 @@ function Users({users}) {
                 <h5>Name: {user.name}</h5>
                 <hr/>
                 <p>Id : {user.id}</p>
+                <p>Password : {user.password}</p>
                 </div>
                 </div>
             </div>

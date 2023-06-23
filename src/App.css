@@ -41,3 +41,10 @@
   border-radius: 5px;
   padding: 4px;
 }
+
+.contactForm{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: antiquewhite;
+}
