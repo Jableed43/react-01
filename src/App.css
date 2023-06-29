@@ -24,3 +24,31 @@
   text-align: center;
   margin: 2px;
 }
+
+/* NavBar */
+.navList{
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  background: #85afdc;
+  padding: 10px;
+}
+
+.navList li{
+  background-color: antiquewhite;
+    border-radius: 5px;
+    padding: 5px;
+    border: gray 1px solid;
+}
+
+.navList li a{
+  color: black;
+  text-decoration: none;
+}
+
+.navSearch {
+  background: antiquewhite;
+    border: solid gray 1px;
+    border-radius: 5px;
+    padding: 2px;
+}

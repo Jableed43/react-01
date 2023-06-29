@@ -2,7 +2,6 @@ function Users({users}) {
 
     return (
     <>
-        
         { //iteracion
             users.map((user, index) => (
             <div key={index} className="card">
