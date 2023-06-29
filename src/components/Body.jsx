@@ -1,4 +1,5 @@
 import Users from './Users'
+import Header from './Header'
 // importarlos -useEffect -useState
 import {useEffect, useState} from 'react';
 function Body() {
@@ -59,6 +60,8 @@ function Body() {
 
     return (
       <>
+        <Header/>
+        
         <h1>Body</h1>
         <button  onClick={handleClick}> {message} </button>
 
