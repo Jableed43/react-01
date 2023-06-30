@@ -14,14 +14,6 @@ function Body() {
     const [show, setShow] = useState(true);
 
     const initialUrl = "https://648b137217f1536d65ea4c77.mockapi.io/api/users"
-    // const fetchUsers = (url) => {
-    // fetch(url)
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     setUsers(data);
-    //   })
-    //   .catch(error => console.log(error))
-    // };
 
     const fetchUsers = async (url) => {
       try {
@@ -30,6 +22,7 @@ function Body() {
         //Acá seteo los users como objeto de js
         //Guardo los users en 
         setUsers(data);
+        console.log(data);
       } catch (error) {
         console.log(error);
       }
@@ -60,8 +53,6 @@ function Body() {
 
     return (
       <>
-        <Header/>
-        
         <h1>Body</h1>
         <button  onClick={handleClick}> {message} </button>
 
