@@ -9,7 +9,7 @@ El proyecto consiste en la creación de un sitio web interactivo utilizando Reac
 - Acceso a un backend de prueba (por ejemplo, MockAPI) para obtener datos de ítems y almacenar credenciales de usuarios registrados.
 
 ### Instrucciones de instalación
-1. Clonar el repositorio del proyecto desde el [repositorio](https://example.com).
+1. Clonar el repositorio del proyecto desde el [repositorio](https://github.com/Jableed43/react-01.git).
 2. Abrir una terminal y navegar hasta la carpeta del proyecto.
 3. Ejecutar el siguiente comando para instalar las dependencias del proyecto:
 
