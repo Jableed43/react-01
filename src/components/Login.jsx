@@ -60,7 +60,7 @@ function Login() {
       <div>
         {user ? (
           <div>
-            <h2>Hola {user.name}!!</h2>
+            <h2>¡Bienvenido {user.name}!</h2>
             <button onClick={handleLogout}>Cerrar sesión</button>
           </div>
         ) : (

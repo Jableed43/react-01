@@ -5,6 +5,7 @@ import Nosotros from './components/Nosotros';
 import Contacto from './components/Contacto';
 import Login from './components/Login';
 import Registro from './components/Registro';
+import ProtectedRoute from './auth/ProtectedRoute';
 
 import { UserProvider } from './UserContext.jsx';
 
@@ -13,11 +14,14 @@ function App() {
   return (
     <UserProvider>
       <Routes>
-        <Route exact path='/usuarios' element={<Inicio/>}/>
+      
+      <Route element={<ProtectedRoute/>}>
+        <Route exact path='/' element={<Inicio/>}/>
+      </Route>
         <Route exact path="/nosotros" element={<Nosotros/>} />
         <Route exact path="/contacto" element={<Contacto/>} />
         <Route exact path="/login" element={<Login/>} />
-        <Route exact path="/" element={<Registro/>} />
+        <Route exact path="/registro" element={<Registro/>} />
       </Routes>
     </UserProvider>
   )

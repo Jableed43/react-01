@@ -19,7 +19,7 @@
 }
 
 .card{
-  width: 22%;
+  width: 100%;
   border: 2px solid black;
   text-align: center;
   margin: 2px;
@@ -51,4 +51,51 @@
     border: solid gray 1px;
     border-radius: 5px;
     padding: 2px;
+}
+
+.crud ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.crud{
+  margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 3fr 0fr;
+}
+
+.modal{
+  position: absolute;
+  top: 100px;
+  left: 50%;
+}
+
+.nosotros{
+  background: rgba(0,0,0,0.2);
+    width: 80%;
+    border-radius: 10px;
+    padding: 15px;
+    border: gold 4px solid;
+}
+
+.container-nosotros{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-nosotros h1{
+  color: cornflowerblue;
+    font-size: 35px;
+}
+
+.contacto-form{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }

@@ -53,7 +53,6 @@ function Body() {
 
     return (
       <>
-        <h1>Body</h1>
         <button  onClick={handleClick}> {message} </button>
 
         <div className={containerClassName}>

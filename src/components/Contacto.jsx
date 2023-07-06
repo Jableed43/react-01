@@ -18,7 +18,7 @@ function Contacto() {
     <>
     <Header/>
     
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='contacto-form'>
 
         <label htmlFor="fullname">Nombre y Apellido</label>
         <input type="text" name='fullname' id='fullname' />

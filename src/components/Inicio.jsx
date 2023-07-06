@@ -7,10 +7,8 @@ const { user } = useContext(UserContext);
     return (
     <>
         <Header/>
-        
-        <h1>Inicio</h1>
         <div>
-      {user ? <h2>Hola {user.name}!!</h2> : <h2>Hola!!</h2>}
+      {user ? <h2> ¡Bienvenido {user.name}!</h2> : <h2>¡Bienvenido!</h2>}
         </div>
         <Body/>
        
