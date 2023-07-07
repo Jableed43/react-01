@@ -14,7 +14,6 @@ function App() {
   return (
     <UserProvider>
       <Routes>
-      
       <Route element={<ProtectedRoute/>}>
         <Route exact path='/' element={<Inicio/>}/>
       </Route>

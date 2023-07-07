@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react';
 import { fetchUsers } from '../usersApi.js';
 
 const UserSearch = () => {
+  //la palabra de la busqueda que escribo en el input
   const [searchTerm, setSearchTerm] = useState('');
+  //guardamos los usuarios
   const [users, setUsers] = useState([]);
+  //usuarios filtrados, que coinciden con el la palabra de busqueda
   const [filteredUsers, setFilteredUsers] = useState([]);
 
   useEffect(() => {
@@ -19,6 +22,7 @@ const UserSearch = () => {
     getUsers();
   }, []);
 
+  //busqueda
   const handleSearch = () => {
     const filtered = users.filter((user) =>
       user.name.toLowerCase().includes(searchTerm.toLowerCase())

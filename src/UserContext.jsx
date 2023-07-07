@@ -6,6 +6,7 @@ const UserContext = createContext();
 
 // { children } representa a todo componente hijo de userProvider
 // UserProvider englobal el estado user y las funciones handle
+
 const UserProvider = ({ children }) => {
   //este estado de usuario va a ser del contexto global
   const [user, setUser] = useState(null);
@@ -15,7 +16,7 @@ const UserProvider = ({ children }) => {
     //guardo en el estado del contexto global
     setUser(loggedInUser);
     // Almacenar el usuario en localStorage
-    //setItem crea o guarda en localstorage el usuario, (nombre de item, data)
+    //setItem crea o guarda en localstorage el usuario, (nombre de item, data en string)
     localStorage.setItem('user', JSON.stringify(loggedInUser)); 
   };
 
@@ -30,6 +31,7 @@ const UserProvider = ({ children }) => {
 
 //Destruimos sesion
   const handleLogout = () => {
+    //borra el estado del usuario
     setUser(null);
     // Eliminar el usuario de localStorage
     localStorage.removeItem('user'); 

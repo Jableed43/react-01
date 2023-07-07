@@ -1,16 +1,23 @@
-import {useContext } from "react";
-import { UserContext } from "../UserContext.jsx";
 import { Outlet, Navigate } from "react-router-dom";
 
-//si o si debe ser asincrona, de lo contrario no llegará a cargar el usuario y te redirige a /register
-async function useAuth(){
-    const { user } = await useContext(UserContext);
-  return user;
+//funcion que verifica si usuario esta loggeado
+function useAuth(){
+  const storedUser = localStorage.getItem('user');
+  if (storedUser) {
+    return storedUser;
+  } else {
+    return false
+  }
 };
  
+//Componente
 function ProtectedRoute(){
-  const isAuth = useAuth();
-  return isAuth ? <Outlet/> : <Navigate to="/registro" />;
+  let user = useAuth()
+  if(!user) {
+    return <Navigate to="/registro" />
+  } else{
+    return <Outlet/>
+  }
 };
 
 export default ProtectedRoute;

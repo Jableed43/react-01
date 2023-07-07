@@ -75,7 +75,9 @@ export default function Users() {
     fetchUsers();
   }, []);
 
+  //formatea la fecha
   function formatDate(dateString) {
+    console.log(dateString);
     const date = new Date(dateString);
     const formattedDate = date.toLocaleString('es-ES', {
       day: '2-digit',
@@ -125,8 +127,8 @@ return (
               onChange={(e) => setEditedUser({ ...editedUser, password: e.target.value })}
             />
 
-            <button onClick={editUser}>Save</button>
-            <button onClick={() => setEditMode(false)}>Cancel</button>
+            <button onClick={editUser}>Guardar</button>
+            <button onClick={() => setEditMode(false)}>Cancelar</button>
           </div>
         ) : (
           <div>

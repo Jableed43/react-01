@@ -13,7 +13,8 @@ console.log(user)
           <nav>
             
             {user ? (
-              <><ul className='navList'>
+              <>
+              <ul className='navList'>
                 <li> <Link to="/">Usuarios</Link> </li>
                 <li> <Link to="/nosotros">Nosotros</Link> </li>
                 <li> <Link to="/contacto">Contacto</Link> </li>
